@@ -23,7 +23,7 @@ jobs:
       - name: Set Docker tags
         run: |
           if [[ "${{ github.ref }}" == "refs/heads/main" ]] || [[ "${{ github.ref }}" == refs/tags/* ]]; then
-            echo DOCKER_TAGS=tsuru/kubectl:${{ matrix.kubectl }},tsuru/kubectl:${{ matrix.kubectl }}-${GITHUB_REF##*/} >> $GITHUB_ENV
+            echo DOCKER_TAGS=tsuru/kubectl:${{ matrix.kubectl }},tsuru/kubectl:${{ matrix.kubectl }}-${GITHUB_REF##*/},tsuru/kubectl:latest >> $GITHUB_ENV
           else
             echo DOCKER_TAGS=tsuru/kubectl:${{ matrix.kubectl }}-${GITHUB_REF##*/} >> $GITHUB_ENV
           fi
