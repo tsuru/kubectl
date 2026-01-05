@@ -9,6 +9,7 @@ jobs:
       matrix:
         kubectl:
           - v1.34.0
+          - v1.35.0
 
     steps:
       - uses: actions/checkout@v3
