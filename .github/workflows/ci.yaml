@@ -2,7 +2,7 @@ name: ci
 on: [push, pull_request]
 jobs:
   generate-kubectl-versions-matrix:
-    name: "Setes up all kubectl release versions for further build and push"
+    name: "Sets up all kubectl release versions for further build and push"
     runs-on: ubuntu-latest
     outputs:
       kubectl-versions: ${{ steps. kubectl-version-setup.outputs.items }}
